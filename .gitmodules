@@ -1,0 +1,30 @@
+[submodule "vim/vim/bundle/vim-ruby"]
+	path = vim/vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby
+[submodule "vim/vim/bundle/vim-erlang-tags"]
+	path = vim/vim/bundle/vim-erlang-tags
+	url = https://github.com/vim-erlang/vim-erlang-tags.git
+[submodule "vim/vim/bundle/vim-erlang-compiler"]
+	path = vim/vim/bundle/vim-erlang-compiler
+	url = https://github.com/vim-erlang/vim-erlang-compiler.git
+[submodule "vim/vim/bundle/vim-erlang-runtime"]
+	path = vim/vim/bundle/vim-erlang-runtime
+	url = https://github.com/vim-erlang/vim-erlang-runtime.git
+[submodule "vim/vim/bundle/vim-erlang-omnicomplete"]
+	path = vim/vim/bundle/vim-erlang-omnicomplete
+	url = https://github.com/vim-erlang/vim-erlang-omnicomplete.git
+[submodule "vim/vim/bundle/vim-erlang-skeletons"]
+	path = vim/vim/bundle/vim-erlang-skeletons
+	url = https://github.com/vim-erlang/vim-erlang-skeletons.git
+[submodule "vim/vim/bundle/vimerl"]
+	path = vim/vim/bundle/vimerl
+	url = https://github.com/jimenezrick/vimerl.git
+[submodule "vim/vim/bundle/ctrlp.vim"]
+	path = vim/vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/vim/bundle/nerdtree"]
+	path = vim/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/vim/bundle/vim-nerdree-tabs"]
+	path = vim/vim/bundle/vim-nerdree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
