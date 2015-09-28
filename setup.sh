@@ -1,8 +1,8 @@
 
 ln -s ~/.dotfiles/zsh ~/.zsh
-rm ~/.zshrc
 ln -s ~/.dotfiles/zsh/zshrc.zsh ~/.zshrc
-ln -s ~/.dotfiles/zsh/oh-my-zsh/themes/doubleend.zsh-theme ~/.oh-my-zsh/themes
+cp -R ~/.dotfiles/oh-my-zsh/oh-my-zsh/* ~/.oh-my-zsh
+cp    ~/.dotfiles/oh-my-zsh/themes/*    ~/.oh-my-zsh/themes
 
 mkdir -p ~/.vim/tmp
 cp -R  ~/.dotfiles/vim/vim/* ~/.vim
