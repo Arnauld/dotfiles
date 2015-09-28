@@ -28,3 +28,6 @@
 [submodule "vim/vim/bundle/vim-nerdree-tabs"]
 	path = vim/vim/bundle/vim-nerdree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "oh-my-zsh/oh-my-zsh"]
+	path = oh-my-zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
