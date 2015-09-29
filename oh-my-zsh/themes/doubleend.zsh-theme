@@ -4,16 +4,7 @@ function git_prompt_info() {
 }
 
 function get_pwd() {
-  print -D $PWD
-}
-
-function battery_charge() {
-  if [ -e ~/bin/batcharge.py ]
-  then
-    echo `python ~/bin/batcharge.py`
-  else
-    echo ''
-  fi
+  echo "${PWD/$HOME/~}"
 }
 
 function put_spacing() {
@@ -24,15 +15,8 @@ function put_spacing() {
     git=0
   fi
 
-  local bat=$(battery_charge)
-  if [ ${#bat} != 0 ]; then
-    ((bat = ${#bat} - 18))
-  else
-    bat=0
-  fi
-
   local termwidth
-  (( termwidth = ${COLUMNS} - 3 - ${#HOST} - ${#$(get_pwd)} - ${bat} - ${git} ))
+  (( termwidth = ${COLUMNS} - 3 - ${#HOST} - ${#$(get_pwd)} - ${git} ))
 
   local spacing=""
   for i in {1..$termwidth}; do
@@ -41,12 +25,20 @@ function put_spacing() {
   echo $spacing
 }
 
-function precmd() {
-print -rP '
-$fg[cyan]%m: $fg[yellow]$(get_pwd)$(put_spacing)$(git_prompt_info) $(battery_charge)'
+function rec_mode() {
+  local rec = ""
+  if [[ "$ASCIINEMA_REC" -eq 1 ]]; then
+    rec = "$fg[red][REC]"
+  fi
+  echo $rec
 }
 
-PROMPT='%{$reset_color%}→ '
+function precmd() {
+print -rP '
+$fg[cyan]%m: $fg[yellow]$(get_pwd)$(put_spacing)$(git_prompt_info)'
+}
+
+PROMPT='$(rec_mode)%{$reset_color%}→ '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="[git:"
 ZSH_THEME_GIT_PROMPT_SUFFIX="]$reset_color"
