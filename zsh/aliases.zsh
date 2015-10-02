@@ -16,6 +16,7 @@ if [[ $IS_LINUX -eq 1 ]]; then
     alias ll='ls -GFhl --color' # Same as above, but in long listing format
 fi
 
+alias tmux="TERM=screen-256color-bce tmux"
 alias termrec="asciinema --max-wait=2"
 alias lsd="ls -ld *" # show directories
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"

@@ -11,3 +11,4 @@ mkdir -p ~/.vim/tmp
 cp -R  ~/.dotfiles/vim/vim/* ~/.vim
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 
+ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
